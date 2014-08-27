@@ -1,0 +1,32 @@
+---
+title: "Instructions"
+author: "Sherri Verdugo"
+date: "August 24, 2014"
+output:
+  html_document:
+    highlight: espresso
+    theme: cosmo
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    highlight: espresso
+    toc: yes
+    toc_depth: 3
+  word_document: default
+---
+
+To start the slide process:
+
+Don't forget to set the working directory
+```{r slidefy_w1, results='markup', echo=TRUE, eval=FALSE}
+library(slidify)
+library(rCharts)
+author('slides2_wed')
+
+#to generate the slides:
+slidify("index.RMD")
+browseURL("index.html")
+
+#to publish
+publish(title = 'mytitle', 'index.html', host = 'rpubs')
+```
